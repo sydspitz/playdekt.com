@@ -184,6 +184,8 @@ body {
 .feature-icon {
   width: 40px;
   height: 40px;
+  min-width: 40px;
+  min-height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -191,11 +193,15 @@ body {
   border-radius: var(--radius-sm);
   margin-bottom: 16px;
   color: var(--accent);
+  overflow: hidden;
 }
 
 .feature-icon svg {
   width: 20px;
   height: 20px;
+  max-width: 20px;
+  max-height: 20px;
+  flex-shrink: 0;
 }
 
 .feature h3 {
