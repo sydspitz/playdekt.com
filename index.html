@@ -6,24 +6,31 @@
   <title>DEKT — A Roguelike Card Game</title>
   <meta name="description" content="A roguelike card game where every guess counts. Draw cards, build streaks, and push your luck through escalating heats.">
   <meta property="og:title" content="DEKT — A Roguelike Card Game">
-  <meta property="og:description" content="A roguelike card game where every guess counts.">
+  <meta property="og:description" content="A roguelike card game where every guess counts. Draw cards, build streaks, and push your luck through escalating heats.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://playdekt.com">
+  <meta property="og:image" content="https://playdekt.com/icon.png">
+  <meta name="theme-color" content="#0A0A0C">
+  <link rel="icon" type="image/png" href="/icon.png">
+  <link rel="apple-touch-icon" href="/icon.png">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="hero-glow" aria-hidden="true"></div>
+
   <div class="container">
     <header class="hero">
+      <img src="icon.png" alt="DEKT app icon" class="app-icon" width="112" height="112">
       <h1 class="logo">DEKT</h1>
       <p class="tagline">A Roguelike Card Game</p>
-      <p class="description">A roguelike card game where every guess counts. Draw cards, build streaks, collect upgrades, and push your luck through escalating heats.</p>
+      <p class="description">Draw cards, build streaks, collect upgrades, and push your luck through escalating heats. Every guess counts.</p>
       <div class="cta">
         <a href="#" class="btn btn-primary" aria-label="Download on the App Store (coming soon)">
           <span class="btn-icon">
-            <svg width="20" height="24" viewBox="0 0 20 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <svg width="18" height="22" viewBox="0 0 20 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
               <path d="M16.47 12.57c-.03-2.84 2.32-4.21 2.42-4.27-1.32-1.93-3.37-2.19-4.1-2.22-1.74-.18-3.41 1.03-4.29 1.03-.89 0-2.26-1.01-3.72-.98-1.91.03-3.68 1.12-4.66 2.84-1.99 3.46-.51 8.58 1.43 11.38.95 1.37 2.08 2.91 3.56 2.85 1.43-.06 1.97-.92 3.7-.92 1.72 0 2.22.92 3.73.89 1.54-.03 2.52-1.4 3.46-2.78 1.09-1.59 1.54-3.13 1.56-3.21-.03-.01-3-1.15-3.03-4.57l-.06-.04zM13.64 4.15c.79-.96 1.32-2.29 1.17-3.62-1.13.05-2.5.76-3.31 1.71-.73.84-1.37 2.19-1.2 3.48 1.26.1 2.55-.64 3.34-1.57z"/>
             </svg>
           </span>
@@ -34,22 +41,41 @@
 
     <section class="features">
       <div class="feature">
-        <div class="feature-icon">&#127183;</div>
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m7 15 5 5 5-5"/>
+            <path d="m7 9 5-5 5 5"/>
+          </svg>
+        </div>
         <h3>Higher or Lower</h3>
         <p>Guess whether the next card is higher, lower, or the same. Simple to learn, impossible to master.</p>
       </div>
       <div class="feature">
-        <div class="feature-icon">&#128293;</div>
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/>
+          </svg>
+        </div>
         <h3>Escalating Heats</h3>
         <p>Each heat raises the stakes. Survive boss rounds and push deeper into your run.</p>
       </div>
       <div class="feature">
-        <div class="feature-icon">&#9889;</div>
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/>
+          </svg>
+        </div>
         <h3>Upgrades &amp; Synergies</h3>
         <p>Collect powerful upgrades that combo together. Build your strategy around what the deck gives you.</p>
       </div>
       <div class="feature">
-        <div class="feature-icon">&#127922;</div>
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7"/>
+            <polyline points="2 17 12 22 22 17"/>
+            <polyline points="2 12 12 17 22 12"/>
+          </svg>
+        </div>
         <h3>Multiple Decks &amp; Stakes</h3>
         <p>Unlock new deck types with unique modifiers and escalating difficulty stakes.</p>
       </div>
