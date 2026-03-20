@@ -281,6 +281,43 @@ body {
   object-fit: cover;
   object-position: top;
   display: block;
+  cursor: pointer;
+}
+
+/* ── Lightbox ────────────────────────────────────── */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.lightbox.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox img {
+  max-height: 85vh;
+  max-width: 90vw;
+  width: auto;
+  border-radius: 16px;
+  box-shadow: 0 16px 64px rgba(0, 0, 0, 0.6);
+  transition: transform 0.25s ease;
+  transform: scale(0.9);
+}
+
+.lightbox.active img {
+  transform: scale(1);
 }
 
 /* ── Features ────────────────────────────────────── */
