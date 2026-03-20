@@ -231,6 +231,51 @@ body {
   animation: fadeUp 0.5s ease-out 0.36s both;
 }
 
+/* ── Screenshots ─────────────────────────────────── */
+.screenshots {
+  position: relative;
+  z-index: 1;
+  padding: 32px 0 8px;
+  animation: fadeUp 0.5s ease-out 0.38s both;
+}
+
+.screenshots-scroll {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 8px 0 16px;
+  scrollbar-width: none;
+}
+
+.screenshots-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.screenshot-frame {
+  flex-shrink: 0;
+  scroll-snap-align: center;
+  width: 200px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.screenshot-frame:hover {
+  border-color: rgba(0, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 255, 255, 0.06);
+}
+
+.screenshot-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* ── Features ────────────────────────────────────── */
 .features {
   position: relative;
@@ -535,6 +580,15 @@ footer {
   .btn {
     padding: 14px 28px;
     font-size: 0.9rem;
+  }
+
+  .screenshots-scroll {
+    justify-content: flex-start;
+    padding: 8px 0 16px;
+  }
+
+  .screenshot-frame {
+    width: 180px;
   }
 
   .hero-glow {
