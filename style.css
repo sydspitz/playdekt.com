@@ -236,30 +236,21 @@ body {
   position: relative;
   z-index: 1;
   padding: 32px 0 8px;
-  margin: 0 -24px;
   animation: fadeUp 0.5s ease-out 0.38s both;
 }
 
 .screenshots-track {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 20px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  padding: 16px 24px;
-  scrollbar-width: none;
-}
-
-.screenshots-track::-webkit-scrollbar {
-  display: none;
+  align-items: flex-end;
+  gap: 16px;
+  padding: 16px 0;
 }
 
 .phone-frame {
   flex-shrink: 0;
-  scroll-snap-align: center;
-  width: 160px;
+  width: 150px;
+  height: 325px;
   border-radius: 20px;
   overflow: hidden;
   background: var(--bg-surface);
@@ -271,7 +262,8 @@ body {
 }
 
 .phone-frame:nth-child(2) {
-  width: 180px;
+  width: 170px;
+  height: 368px;
   z-index: 1;
 }
 
@@ -285,7 +277,9 @@ body {
 
 .phone-frame img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
   display: block;
 }
 
@@ -595,16 +589,14 @@ footer {
     font-size: 0.9rem;
   }
 
-  .screenshots-track {
-    justify-content: flex-start;
-  }
-
   .phone-frame {
-    width: 140px;
+    width: 110px;
+    height: 238px;
   }
 
   .phone-frame:nth-child(2) {
-    width: 140px;
+    width: 125px;
+    height: 271px;
   }
 
   .hero-glow {
