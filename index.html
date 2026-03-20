@@ -116,8 +116,8 @@
     </footer>
   </div>
 
-  <div class="lightbox" id="lightbox">
-    <img id="lightbox-img" alt="">
+  <div id="lightbox" style="position:fixed;inset:0;z-index:100;background:rgba(0,0,0,0.85);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;pointer-events:none;transition:opacity 0.25s ease;">
+    <img id="lightbox-img" alt="" style="max-height:85vh;max-width:90vw;width:auto;border-radius:16px;box-shadow:0 16px 64px rgba(0,0,0,0.6);transition:transform 0.25s ease;transform:scale(0.9);">
   </div>
 
   <script>
@@ -128,12 +128,16 @@
       img.addEventListener('click', () => {
         lightboxImg.src = img.src;
         lightboxImg.alt = img.alt;
-        lightbox.classList.add('active');
+        lightbox.style.opacity = '1';
+        lightbox.style.pointerEvents = 'auto';
+        lightboxImg.style.transform = 'scale(1)';
       });
     });
 
     lightbox.addEventListener('click', () => {
-      lightbox.classList.remove('active');
+      lightbox.style.opacity = '0';
+      lightbox.style.pointerEvents = 'none';
+      lightboxImg.style.transform = 'scale(0.9)';
     });
   </script>
 </body>
