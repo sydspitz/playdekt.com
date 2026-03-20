@@ -156,6 +156,10 @@ body {
 
 /* ── CTA Button ──────────────────────────────────── */
 .cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
   animation: fadeUp 0.5s ease-out 0.32s both;
 }
 
@@ -189,18 +193,20 @@ body {
 .btn-coming-soon {
   background: linear-gradient(
     110deg,
-    rgba(0, 255, 255, 0.15) 0%,
-    rgba(0, 255, 255, 0.15) 40%,
-    rgba(0, 255, 255, 0.3) 50%,
-    rgba(0, 255, 255, 0.15) 60%,
-    rgba(0, 255, 255, 0.15) 100%
+    rgba(0, 255, 255, 0.08) 0%,
+    rgba(0, 255, 255, 0.08) 40%,
+    rgba(0, 255, 255, 0.18) 50%,
+    rgba(0, 255, 255, 0.08) 60%,
+    rgba(0, 255, 255, 0.08) 100%
   );
   background-size: 200% 100%;
-  color: var(--cyan);
-  border: 1px solid rgba(0, 255, 255, 0.2);
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.08);
+  color: var(--text-muted);
+  border: 1px solid rgba(0, 255, 255, 0.1);
+  box-shadow: none;
   cursor: default;
-  animation: fadeUp 0.5s ease-out 0.32s both, shimmer 4s ease-in-out 1.5s infinite;
+  font-size: 0.8rem;
+  padding: 10px 20px;
+  animation: fadeUp 0.5s ease-out 0.4s both, shimmer 4s ease-in-out 1.5s infinite;
 }
 
 .btn:focus-visible {
